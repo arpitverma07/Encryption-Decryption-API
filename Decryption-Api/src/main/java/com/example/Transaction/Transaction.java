@@ -1,4 +1,4 @@
-package com.example.DecryptionApi;
+package com.example.Transaction;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

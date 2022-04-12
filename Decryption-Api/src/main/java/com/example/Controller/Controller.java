@@ -1,6 +1,7 @@
-package com.example.DecryptionApi;
+package com.example.Controller;
 
 import java.io.IOException;
+
 
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
@@ -16,15 +17,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-
+import com.example.DecryptionAES.AESDecryption;
+import com.example.Repository.RepositoryTrans;
+import com.example.Transaction.FeignClientProxy;
+import com.example.Transaction.Transaction;
 
 
 @RestController
-@ComponentScan("com.example.Controller")
 public class Controller {
 	
 	@Autowired
-	private TransRepo transactionRepo;
+	private RepositoryTrans transactionRepo;
 	
 	@Autowired
 	private AESDecryption aesDecryption;
